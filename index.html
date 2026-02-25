@@ -3,81 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Epiclick Photography</title>
+<title>Epiclick Photography | Cinematic Wedding Stories</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-}
-
-body{
-background:#0d0d0d;
-color:white;
 font-family:'Poppins',sans-serif;
 }
 
-header{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1606800052052-a08af7148866');
-background-size:cover;
-background-position:center;
+body{
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+color:white;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 display:flex;
-flex-direction:column;
+justify-content:space-between;
+padding:15px 8%;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa') center/cover;
+position:relative;
 }
 
-header h1{
-font-family:'Playfair Display',serif;
+.hero::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
 font-size:50px;
-color:#d4af37;
-}
-
-header p{
-margin-top:15px;
-font-size:18px;
+font-family:'Playfair Display',serif;
 }
 
 .btn{
-margin-top:25px;
-padding:12px 25px;
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
 background:#d4af37;
 color:black;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-border-radius:30px;
 }
 
 section{
-padding:60px 10%;
+padding:80px 10%;
+text-align:center;
 }
 
 h2{
-text-align:center;
-color:#d4af37;
 margin-bottom:40px;
 font-family:'Playfair Display',serif;
-}
-
-.about{
-text-align:center;
-max-width:800px;
-margin:auto;
-line-height:1.7;
+font-size:36px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+gap:20px;
 }
 
 .gallery img{
@@ -92,41 +118,40 @@ transition:0.4s;
 transform:scale(1.05);
 }
 
-.services{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
 .card{
-background:#1a1a1a;
+background:rgba(255,255,255,0.1);
 padding:25px;
-width:250px;
-border-radius:10px;
-text-align:center;
-border:1px solid #d4af37;
+border-radius:15px;
+margin:15px;
 }
 
-.reviews{
-text-align:center;
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-.review-box{
-margin-bottom:20px;
-font-style:italic;
+input,textarea{
+padding:12px;
+border:none;
+border-radius:8px;
 }
 
-.contact{
-text-align:center;
+button{
+padding:12px;
+background:#d4af37;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
 }
 
 footer{
 background:black;
-text-align:center;
 padding:20px;
-margin-top:40px;
-color:#aaa;
+text-align:center;
 }
 
 .whatsapp{
@@ -137,65 +162,72 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
+font-size:22px;
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Epiclick Photography</h1>
-<p>Capturing Timeless Indian Wedding Moments</p>
-<a href="#contact" class="btn">Book Now</a>
-</header>
+<nav>
+<div><b>EPICLICK</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking">Book</a>
+</div>
+</nav>
+
+<div class="hero">
+<div class="hero-content">
+<h1>Cinematic Wedding Stories</h1>
+<a href="#booking" class="btn">Book Your Shoot</a>
+</div>
+</div>
 
 <section id="about">
-<h2>About Us</h2>
-<div class="about">
-<p>Epiclick Photography specializes in premium Indian wedding cinematography and photography. We capture emotions, traditions, and timeless love stories with cinematic excellence.</p>
-</div>
+<h2>My Story</h2>
+<p>Epiclick Photography captures timeless Indian wedding moments with cinematic excellence and emotional storytelling.</p>
 </section>
 
-<section>
+<section id="gallery">
 <h2>Wedding Gallery</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb">
-<img src="https://images.unsplash.com/photo-1610173826603-5f1f2c4a9657">
-<img src="https://images.unsplash.com/photo-1623953810438-33c5b2e3f1e0">
-<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3">
 <img src="https://images.unsplash.com/photo-1604014237744-9c8b2e3c3b1c">
-<img src="https://images.unsplash.com/photo-1602631985686-1bb0e6a8692d">
+<img src="https://images.unsplash.com/photo-1610173826603-5f1f2c4a9657">
+<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3">
+<img src="https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb">
 </div>
 </section>
 
-<section>
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">Wedding Photography</div>
-<div class="card">Cinematic Wedding Films</div>
-<div class="card">Pre-Wedding Shoots</div>
-<div class="card">Engagement Coverage</div>
-</div>
-</section>
-
-<section>
+<section id="reviews">
 <h2>Client Reviews</h2>
-<div class="reviews">
-<div class="review-box">"Best wedding photographer! Captured every emotion perfectly."</div>
-<div class="review-box">"Highly professional and cinematic work. 100% recommended."</div>
-</div>
+<div class="card">"Highly professional and cinematic work!"</div>
+<div class="card">"Captured every emotion beautifully."</div>
 </section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-<div class="contact">
-<p>📞 Call: 9665354099</p>
-<p>📷 Instagram: <a href="https://www.instagram.com/epiclickphotography" style="color:#d4af37;">@epiclickphotography</a></p>
-<p>📍 Available for Destination Weddings</p>
-</div>
+<section id="booking">
+<h2>Book Your Shoot</h2>
+
+<form action="https://formsubmit.co/harshalwakode27@gmail.com" method="POST">
+
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="date" name="Event Date" required>
+<input type="text" name="Location" placeholder="Event Location" required>
+<textarea name="Message" placeholder="Your Message"></textarea>
+
+<button type="submit">Submit Booking</button>
+
+</form>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>📞 9665354099</p>
+<p>📷 Instagram: @epiclickphotography</p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/919665354099">💬</a>
