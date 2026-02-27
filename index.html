@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ķ<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Epiclick Photography | Cinematic Wedding Stories</title>
+<title>Epiclick Photography | Royal Indian Weddings</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -13,20 +13,12 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
-background-size:400% 400%;
-animation:gradient 12s ease infinite;
-color:white;
-}
-
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+font-family:'Poppins',sans-serif;
+background:#4b0f1c;
+color:#f8f1e7;
 }
 
 nav{
@@ -34,70 +26,78 @@ position:fixed;
 width:100%;
 top:0;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(8px);
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
 z-index:1000;
 }
 
+nav h2{
+font-family:'Cinzel',serif;
+color:#d4af37;
+letter-spacing:2px;
+}
+
 nav a{
-color:white;
+color:#f8f1e7;
 text-decoration:none;
-margin-left:20px;
-font-weight:500;
+margin-left:25px;
+font-size:14px;
 }
 
 .hero{
 height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1604014237744-9c8b2e3c3b1c') center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa') center/cover;
-position:relative;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
 }
 
 .hero h1{
-font-size:50px;
-font-family:'Playfair Display',serif;
+font-family:'Great Vibes',cursive;
+font-size:70px;
+color:#d4af37;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+letter-spacing:2px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
+margin-top:30px;
 padding:12px 30px;
 background:#d4af37;
-color:black;
-border-radius:30px;
-text-decoration:none;
+color:#4b0f1c;
 font-weight:bold;
+text-decoration:none;
+border-radius:30px;
 }
 
 section{
-padding:80px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 h2{
+font-family:'Cinzel',serif;
+color:#d4af37;
 margin-bottom:40px;
-font-family:'Playfair Display',serif;
-font-size:36px;
+font-size:32px;
+}
+
+.story{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+font-size:17px;
 }
 
 .gallery{
@@ -108,7 +108,7 @@ gap:20px;
 
 .gallery img{
 width:100%;
-height:300px;
+height:350px;
 object-fit:cover;
 border-radius:10px;
 transition:0.4s;
@@ -118,11 +118,25 @@ transition:0.4s;
 transform:scale(1.05);
 }
 
+.service-box{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
 .card{
-background:rgba(255,255,255,0.1);
-padding:25px;
+background:#6a1b2e;
+padding:30px;
+width:260px;
 border-radius:15px;
-margin:15px;
+border:1px solid #d4af37;
+}
+
+.review{
+max-width:700px;
+margin:20px auto;
+font-style:italic;
 }
 
 form{
@@ -142,16 +156,18 @@ border-radius:8px;
 button{
 padding:12px;
 background:#d4af37;
+color:#4b0f1c;
+font-weight:bold;
 border:none;
 border-radius:30px;
-font-weight:bold;
 cursor:pointer;
 }
 
 footer{
 background:black;
-padding:20px;
+padding:25px;
 text-align:center;
+color:#aaa;
 }
 
 .whatsapp{
@@ -162,8 +178,8 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-text-decoration:none;
 font-size:22px;
+text-decoration:none;
 }
 </style>
 </head>
@@ -171,45 +187,59 @@ font-size:22px;
 <body>
 
 <nav>
-<div><b>EPICLICK</b></div>
+<h2>EPICLICK</h2>
 <div>
-<a href="#about">About</a>
+<a href="#story">Our Story</a>
 <a href="#gallery">Gallery</a>
+<a href="#services">Services</a>
 <a href="#reviews">Reviews</a>
 <a href="#booking">Book</a>
 </div>
 </nav>
 
 <div class="hero">
-<div class="hero-content">
-<h1>Cinematic Wedding Stories</h1>
-<a href="#booking" class="btn">Book Your Shoot</a>
+<div>
+<h1>Royal Wedding Stories</h1>
+<p>Capturing Traditions. Preserving Emotions.</p>
+<a href="#booking" class="btn">Book Your Wedding</a>
 </div>
 </div>
 
-<section id="about">
-<h2>My Story</h2>
-<p>Epiclick Photography captures timeless Indian wedding moments with cinematic excellence and emotional storytelling.</p>
+<section id="story">
+<h2>Our Story</h2>
+<div class="story">
+Epiclick Photography captures timeless Indian wedding traditions with royal elegance and cinematic storytelling. From sacred rituals to grand celebrations, we frame emotions that last forever.
+</div>
 </section>
 
 <section id="gallery">
 <h2>Wedding Gallery</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1604014237744-9c8b2e3c3b1c">
+<img src="https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb">
 <img src="https://images.unsplash.com/photo-1610173826603-5f1f2c4a9657">
 <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3">
-<img src="https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb">
+<img src="https://images.unsplash.com/photo-1602631985686-1bb0e6a8692d">
+</div>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="service-box">
+<div class="card">Wedding Photography</div>
+<div class="card">Cinematic Wedding Films</div>
+<div class="card">Pre Wedding Shoots</div>
+<div class="card">Engagement Coverage</div>
 </div>
 </section>
 
 <section id="reviews">
 <h2>Client Reviews</h2>
-<div class="card">"Highly professional and cinematic work!"</div>
-<div class="card">"Captured every emotion beautifully."</div>
+<div class="review">“Absolutely royal and cinematic experience!”</div>
+<div class="review">“Captured our traditions beautifully.”</div>
 </section>
 
 <section id="booking">
-<h2>Book Your Shoot</h2>
+<h2>Book Your Wedding</h2>
 
 <form action="https://formsubmit.co/harshalwakode27@gmail.com" method="POST">
 
