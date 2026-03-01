@@ -1,220 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Epiclick Photography | Cinematic Royal Weddings</title>
+<title>Epiclick Photography</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#4b0f1c;color:#f8f1e7;overflow-x:hidden;}
-
-nav{
-position:fixed;width:100%;top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-display:flex;justify-content:space-between;
-padding:15px 8%;z-index:1000;
-}
-nav h2{font-family:'Cinzel',serif;color:#d4af37;}
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px;}
-
-.hero{
-height:100vh;
-position:relative;
-overflow:hidden;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-opacity:0;
-animation:fade 18s infinite;
+body{
+font-family:'Poppins',sans-serif;
+background:#0f0f0f;
+color:white;
 }
 
-.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1604014237744-9c8b2e3c3b1c');animation-delay:0s;}
-.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb');animation-delay:6s;}
-.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1610173826603-5f1f2c4a9657');animation-delay:12s;}
-
-@keyframes fade{
-0%{opacity:0;}
-10%{opacity:1;}
-30%{opacity:1;}
-40%{opacity:0;}
-100%{opacity:0;}
-}
-
-.hero-content{
-position:absolute;top:50%;left:50%;
-transform:translate(-50%,-50%);
-text-align:center;z-index:2;
-}
-
-.hero h1{
-font-family:'Great Vibes',cursive;
-font-size:70px;color:#d4af37;
-}
-
-.hero p{margin-top:15px;font-size:18px;letter-spacing:2px;}
-
-.btn{
-display:inline-block;margin-top:25px;
-padding:12px 30px;background:#d4af37;
-color:#4b0f1c;font-weight:bold;
-border-radius:30px;text-decoration:none;
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
 section{
-padding:100px 10%;
+padding:80px 10%;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('hero1.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
-opacity:0;
-transform:translateY(50px);
-transition:1s;
+animation:slide 12s infinite;
 }
 
-section.show{
-opacity:1;
-transform:translateY(0);
+@keyframes slide{
+0%{background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('hero1.jpg');}
+50%{background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('hero2.jpg');}
+100%{background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('hero1.jpg');}
 }
 
-h2{
-font-family:'Cinzel',serif;
-color:#d4af37;margin-bottom:40px;
+.hero-content h1{
+font-size:55px;
+color:#d4af37;
+letter-spacing:2px;
 }
 
-.gallery{
+.hero-content p{
+margin-top:20px;
+font-size:20px;
+}
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 30px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:0.4s;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* GALLERY */
+
+.gallery h2{
+text-align:center;
+color:#d4af37;
+margin-bottom:40px;
+font-size:40px;
+}
+
+.gallery-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.gallery img{
-width:100%;height:350px;
-object-fit:cover;border-radius:10px;
-transition:0.4s;
+.gallery-grid img{
+width:100%;
+height:350px;
+object-fit:cover;
+transition:0.5s;
+border-radius:10px;
 }
 
-.gallery img:hover{transform:scale(1.05);}
+.gallery-grid img:hover{
+transform:scale(1.1);
+}
 
-.card{
-background:#6a1b2e;padding:30px;
-margin:15px;border-radius:15px;
-border:1px solid #d4af37;
+/* STORY SECTION */
+
+.story{
+background:#111;
+text-align:center;
+}
+
+.story h2{
+color:#d4af37;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.story p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+/* BOOKING FORM */
+
+.booking{
+text-align:center;
+}
+
+.booking h2{
+color:#d4af37;
+font-size:40px;
+margin-bottom:30px;
 }
 
 form{
-max-width:600px;margin:auto;
-display:flex;flex-direction:column;
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
 gap:15px;
 }
 
 input,textarea{
-padding:12px;border:none;border-radius:8px;
+padding:12px;
+border:none;
+border-radius:5px;
+outline:none;
+}
+
+textarea{
+resize:none;
+height:120px;
 }
 
 button{
-padding:12px;background:#d4af37;
-color:#4b0f1c;font-weight:bold;
-border:none;border-radius:30px;
+padding:12px;
+background:#d4af37;
+border:none;
+font-weight:bold;
 cursor:pointer;
+border-radius:30px;
 }
+
+button:hover{
+background:white;
+}
+
+/* FOOTER */
 
 footer{
-background:black;padding:25px;
-text-align:center;color:#aaa;
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-size:14px;
 }
 
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%;
-font-size:22px;text-decoration:none;
-}
 </style>
 </head>
 
 <body>
 
-<nav>
-<h2>EPICLICK</h2>
-<div>
-<a href="#story">Story</a>
-<a href="#gallery">Gallery</a>
-<a href="#services">Services</a>
-<a href="#booking">Book</a>
-</div>
-</nav>
-
-<div class="hero">
-<div class="slide"></div>
-<div class="slide"></div>
-<div class="slide"></div>
-
+<section class="hero">
 <div class="hero-content">
-<h1>Royal Wedding Stories</h1>
-<p>Cinematic. Emotional. Timeless.</p>
-<a href="#booking" class="btn">Book Your Wedding</a>
+<h1>Epiclick Photography</h1>
+<p>Capturing Timeless Wedding Stories</p>
+<a href="#booking" class="btn">Book Your Shoot</a>
 </div>
-</div>
+</section>
 
-<section id="story">
+<section class="gallery">
+<h2>Our Wedding Moments</h2>
+<div class="gallery-grid">
+<img src="hero2.jpg">
+<img src="bride.jpg">
+<img src="hero1.jpg">
+<img src="hero2.jpg">
+<img src="hero1.jpg">
+<img src="bride.jpg">
+</div>
+</section>
+
+<section class="story">
 <h2>Our Story</h2>
-<p>Epiclick Photography captures Indian wedding traditions with royal elegance and cinematic storytelling.</p>
+<p>
+We believe every wedding tells a beautiful story filled with love, emotion, and tradition.
+Our mission is to capture those sacred moments and turn them into timeless memories.
+From haldi to reception, we frame emotions that last forever.
+</p>
 </section>
 
-<section id="gallery">
-<h2>Wedding Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3">
-<img src="https://images.unsplash.com/photo-1602631985686-1bb0e6a8692d">
-<img src="https://images.unsplash.com/photo-1598275275727-6e3eeb5e9fbb">
-</div>
-</section>
-
-<section id="services">
-<h2>Services</h2>
-<div class="card">Wedding Photography</div>
-<div class="card">Cinematic Films</div>
-<div class="card">Pre Wedding Shoots</div>
-</section>
-
-<section id="booking">
-<h2>Book Your Wedding</h2>
-
-<form action="https://formsubmit.co/harshalwakode27@gmail.com" method="POST">
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-<input type="date" name="Event Date" required>
-<input type="text" name="Location" placeholder="Event Location" required>
-<textarea name="Message" placeholder="Your Message"></textarea>
-<button type="submit">Submit Booking</button>
+<section class="booking" id="booking">
+<h2>Book Your Shoot</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="date" required>
+<input type="text" placeholder="Event Location" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Submit</button>
 </form>
-
 </section>
-
-<a class="whatsapp" href="https://wa.me/919665354099">💬</a>
 
 <footer>
 © 2026 Epiclick Photography | All Rights Reserved
 </footer>
 
-<script>
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-const top=sec.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-sec.classList.add("show");
-}
-});
-});
-</script>
-
 </body>
 </html>
-
